@@ -1,9 +1,10 @@
 import React,{useEffect} from 'react';
 import {useDispatch,useSelector} from 'react-redux';
-import {getAllPatients,deletePatient} from '../actions/patientAction';
+import {getAllPatients} from '../actions/patientAction';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
-import {AiFillDelete} from 'react-icons/ai';
+// import {AiFillDelete} from 'react-icons/ai';
+import {AiFillInfoCircle} from 'react-icons/ai';
 
 const PatientsList = () => {
 
@@ -34,7 +35,7 @@ const PatientsList = () => {
                   Patient Email
                 </th>
                 <th scope="col" className="px-6 py-3 hover:text-light2">
-                  Delete
+                  Manage
                 </th>
             </tr>
         </thead>
@@ -45,8 +46,8 @@ const PatientsList = () => {
              <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">{patient._id}</th>
              <td className="px-6 py-4">{patient.fname} {patient.lname}</td>
              <td className="px-6 py-4">{patient.email}</td>
-             <td className="px-6 py-4"><AiFillDelete style={{color : 'red',cursor : 'pointer'}} 
-                onClick={() => {dispatch(deletePatient(patient._id))}}
+             <td className="px-6 py-4"><AiFillInfoCircle className='text-2xl' style={{color : 'blue',cursor : 'pointer'}} 
+                
               /></td>
           </tr>
         ))}

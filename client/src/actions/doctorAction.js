@@ -101,3 +101,15 @@ export const doctorAddEhr = (data) => async (dispatch) => {
        dispatch({type : 'DOCTOR_ADDEHR_FAIL',payload : error});
     }
 };
+
+export const filterDoctor = (searchKey) => async dispatch => {
+    let filteredDoctor;
+    dispatch({type : 'GET_DOCTORS_REQUEST'});
+    try {
+      const res = await axios.get('/api/doctors/getalldoctors');
+      filteredDoctor = res.data.filter(doctor => doctor.fname.toLowerCase().includes(searchKey));
+      dispatch({type : 'GET_DOCTORS_SUCCESS',payload : filteredDoctor});
+    } catch (error) {
+     dispatch({type : 'GET_DOCTORS_FAIL',payload : error});
+    }
+ };

@@ -20,7 +20,7 @@ const PatientFullProfile = () => {
             return (
               <div
                 key={patient.id}
-                className="flex md:flex-row flex-col items-center md:px-20 px-4 md:py-20 py-10 gap-10 justify-between"
+                className="flex md:flex-row bg-gray-200 rounded-3xl m-10 flex-col items-center md:px-20 px-4 md:py-20 py-10 gap-10 justify-between"
               >
                 <div className="flex md:flex-row flex-col md:w-4/5 w-full items-center justify-start md:gap-32 gap-10">
                   <div className="flex flex-col items-center gap-3">
@@ -71,17 +71,22 @@ const PatientFullProfile = () => {
                 </div>
 
                 <div className="flex md:flex-col flex-row md:w-48 w-full md:justify-center justify-between gap-4">
-                  <button
+                  {/* <button
                     onClick={handleDelete}
                     className="bg-white border-2 border-solid border-light2 hover:bg-light2 hover:border-teal-900 hover:text-white py-2 px-4 rounded-3xl font-semibold text-teal-900"
                   >
                     Back to Dashboard
-                  </button>
-                  <NavLink to="/getdocument">
+                  </button> */}
+                  <NavLink to="/">
+                    <button className="bg-white border-2 border-solid border-light2 hover:bg-light2 hover:border-teal-900 hover:text-white py-2 px-4 rounded-3xl font-semibold text-teal-900">
+                      Back to Dashboard
+                    </button>
+                  </NavLink>
+                  {/* <NavLink to="/">
                     <button className="bg-white border-2 border-solid border-light2 hover:bg-light2 hover:border-teal-900 hover:text-white py-2 px-4 rounded-3xl font-semibold text-teal-900">
                       Close Profile
                     </button>
-                  </NavLink>
+                  </NavLink> */}
                 </div>
               </div>
             );
@@ -105,12 +110,6 @@ const PatientFullProfile = () => {
           Patient Information
         </button>
       </div>
-      <VitalSignCheck />
-      <VitalSignCheck />
-      <VitalSignCheck />
-      <VitalSignCheck />
-      <VitalSignCheck />
-      <VitalSignCheck />
       <VitalSignCheck />
     </>
   );

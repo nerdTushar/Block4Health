@@ -111,14 +111,17 @@ const PatientDashboardScreen = () => {
                 </p>
               </div>
               <div className="flex justify-around mb-3 ">
-                <button className="bg-teal-900 rounded-lg p-2 text-xs text-white ">
-                  Edit Profie
+                <button className="bg-teal-900  rounded-lg p-3 text-xs text-white ">
+                  Female
                 </button>
-                <button className="bg-teal-900 rounded-lg p-2 text-xs text-white ">
-                  Edit Profie
+                <button className="bg-teal-900 rounded-lg p-3 text-xs text-white ">
+                  27
+                </button>
+                <button className="bg-teal-900 rounded-lg p-3 text-xs text-white ">
+                  Married
                 </button>
               
-                {!currentAccount && (
+                {/* {!currentAccount && (
              <button className='bg-teal-900 rounded-lg p-2 text-xs text-white' onClick={() => {dispatch(connectWalletPatient())}}>Connect Wallet</button>
            )
            
@@ -127,39 +130,31 @@ const PatientDashboardScreen = () => {
              <button className='bg-teal-900 rounded-lg p-2 text-xs text-white' onClick={() => {dispatch(connectWalletPatient())}}>Disconnect Wallet</button>
            )
            
-           }
+           } */}
               </div>
             </div>
           </div>
 
-          <div className="shadow-lg  transform  duration-200 easy-in-out">
+          <div className="shadow-lg transform  duration-200 easy-in-out">
             <div className="py-2 bg-light2 overflow-hidden flex justify-around items-center">
               <p className="text-white">My Virtual Sign</p>
-              <button className="bg-teal-900 rounded-lg p-3 text-white">View All</button>
+              <button className="bg-teal-900 rounded-lg p-3 text-white">Add/View All</button>
+            </div>
+            <h1 className="py-5">Date : 06-07-2024</h1>
+            <div className="flex justify-center">
+            <div className="grid grid-cols-3 gap-y-10 gap-x-5">
+            <h1 className="border-2 border-gray-400 rounded-2xl shadow-lg shadow-gray-200 cursor-pointer h-min w-min p-4">Heart Rate</h1>
+            <h1 className="border-2 border-gray-400 rounded-2xl shadow-lg shadow-gray-200 cursor-pointer w-min h-min p-4">SpaO2</h1>
+            <h1 className="border-2 border-gray-400 rounded-2xl shadow-lg shadow-gray-200 cursor-pointer w-min h-min p-4">Temperature</h1>
+            <h1 className="border-2 border-gray-400 rounded-2xl shadow-lg shadow-gray-200 cursor-pointer w-min h-min p-4">Respiration Rate</h1>
+            <h1 className="border-2 border-gray-400 rounded-2xl shadow-lg shadow-gray-200 cursor-pointer w-min h-min p-4">Blood Glucose</h1>
+            <h1 className="border-2 border-gray-400 rounded-2xl shadow-lg shadow-gray-200 cursor-pointer w-min h-min p-4">Blood Pressure</h1>
+            </div>
             </div>
           </div>
         </div>
 
         <div className="grid grid-rows-2 px-3 py-10 gap-10">
-          <div className="   bg-white  shadow-lg    transform   duration-200 easy-in-out">
-            <div className=" h-12 bg-light2 overflow-hidden  flex justify-around items-center">
-              <p className="text-white">Calendar</p>
-              <button className="bg-teal-900 rounded-lg p-2 text-xs text-white">
-                Go to Calendar
-              </button>
-            </div>
-
-            <MyCalendar />
-
-            <div className="mt-3 ">
-              <div className=" h-12 bg-light2 overflow-hidden  flex justify-around items-center">
-                <p className="text-white">Upcoming Appointment</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-rows-2 px-3 py-10">
           <div className="   bg-white  rounded-lg shadow-lg   transform   duration-200 easy-in-out">
             <div className=" h-12 bg-light2 overflow-hidden   flex justify-around items-center">
               <p className="text-white">My Favorite Practitioners</p>
@@ -177,7 +172,7 @@ const PatientDashboardScreen = () => {
                     className="mr-2"
                     src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80"
                   />
-                  <p className="text-white">prashant srivastava</p>
+                  <p className="text-white">Prashant Srivastava</p>
                 </div>
 
                 <div>
@@ -194,7 +189,61 @@ const PatientDashboardScreen = () => {
                     className="mr-2"
                     src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80"
                   />
-                  <p className="text-white">prashant srivastava</p>
+                  <p className="text-white">Sanjeev Arora</p>
+                </div>
+
+                <div>
+                  <VideoCameraFrontIcon />
+                </div>
+              </div>
+            </div>
+
+            <div className="p-2">
+              <div className="flex justify-between p-2 items-center bg-light1 w-full h-10 rounded-lg mt-1 mt-1">
+                <div className="flex items-center w-full">
+                  <Avatar
+                    alt="Remy Sharp"
+                    sx={{ width: 24, height: 24 }}
+                    className="mr-2"
+                    src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80"
+                  />
+                  <p className="text-white">Aman Patodia</p>
+                </div>
+
+                <div>
+                  <VideoCameraFrontIcon />
+                </div>
+              </div>
+            </div>
+
+            <div className="p-2">
+              <div className="flex justify-between p-2 items-center bg-light1 w-full h-10 rounded-lg mt-1 mt-1">
+                <div className="flex items-center w-full">
+                  <Avatar
+                    alt="Remy Sharp"
+                    sx={{ width: 24, height: 24 }}
+                    className="mr-2"
+                    src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80"
+                  />
+                  <p className="text-white">Suraj Paliwal</p>
+                </div>
+
+                <div>
+                  <VideoCameraFrontIcon />
+                </div>
+              </div>
+            </div>
+
+            <div className="p-2">
+              <div className="flex justify-between p-2 items-center bg-light1 w-full h-10 rounded-lg mt-1 mt-1">
+                <div className="flex items-center w-full">
+                  <Avatar
+                    alt="Remy Sharp"
+                    sx={{ width: 24, height: 24 }}
+                    className="mr-2"
+                    src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80"
+                  />
+                  <p className="text-white">Anil Sharma</p>
                 </div>
 
                 <div>
@@ -204,7 +253,7 @@ const PatientDashboardScreen = () => {
             </div>
           </div>
 
-          <div className="   bg-white  rounded-lg shadow-lg   transform   duration-200 easy-in-out">
+          <div className="  rounded-lg shadow-lg   transform   duration-200 easy-in-out">
             <div className=" h-12 bg-light2 overflow-hidden   flex justify-around items-center">
               <p className="text-white">My Panel & Insurance</p>
               <button className="bg-teal-900 rounded-lg p-2 text-xs text-white">
@@ -213,6 +262,25 @@ const PatientDashboardScreen = () => {
             </div>
 
             <CommonTable />
+          </div>
+        </div>
+
+        <div className="grid px-3 py-10 gap-10">
+          <div className="   bg-white  shadow-lg    transform   duration-200 easy-in-out">
+            <div className=" h-12 bg-light2 overflow-hidden  flex justify-around items-center">
+              <p className="text-white">Calendar</p>
+              <button className="bg-teal-900 rounded-lg p-2 text-xs text-white">
+                Go to Calendar
+              </button>
+            </div>
+
+            <MyCalendar />
+
+            <div className="mt-3 ">
+              <div className=" h-12 bg-light2 overflow-hidden  flex justify-around items-center">
+                <p className="text-white">Upcoming Appointment</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

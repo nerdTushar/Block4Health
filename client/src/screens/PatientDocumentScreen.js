@@ -1,10 +1,12 @@
-import React from "react";
+import React,{useState} from "react";
 import patients from "../patient-data";
 import { BsFillPlusCircleFill } from "react-icons/bs";
-import { AiFillFilePdf } from "react-icons/ai";
+import { AiFillFilePdf,AiOutlineClose } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
 const PatientDocumentScreen = () => {
+  const [showModal, setShowModal] = useState(false);
+
   let id = localStorage.getItem("id")
     ? JSON.parse(localStorage.getItem("id"))
     : null;
@@ -152,9 +154,69 @@ const PatientDocumentScreen = () => {
       </div>
       <div className="md:px-20 px-4 md:my-20 my-10 flex md:flex-row flex-col md:items-start items-center gap-10 justify-between">
         <div className="bg-light2 md:w-2/5 w-4/5 h-1/5 rounded md:py-20 py-14 shadow-lg shadow-gray-500/50 flex flex-col items-center gap-4">
-          <BsFillPlusCircleFill className="fill-white text-3xl hover:fill-black" />
+          <BsFillPlusCircleFill onClick={() => setShowModal(true)} className="fill-white cursor-pointer text-3xl hover:fill-black" />
           <h1 className="font-semibold text-white">New Document</h1>
         </div>
+
+        {showModal ? (
+        <>
+          <div
+            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+          >
+            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+              {/*content*/}
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                {/*header*/}
+                <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                <h3 className="text-3xl text-teal-500 font-semibold">
+                    Documents
+                  </h3>
+                  <button
+                    className="p-1 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                    onClick={() => setShowModal(false)}
+                  >
+                    
+                      <AiOutlineClose className="fill-teal-500" />
+                    
+                  </button>
+                </div>
+                <div className="relative md:p-10 p-6 grid md:grid-cols-3 grid-cols-2 gap-10">
+                  <div className="border-2 border-teal-900 hover:border-teal-500 rounded-2xl shadow-md cursor-pointer shadow-gray-300 w-min h-min p-4">
+                     <h1>SOAP Notes</h1>
+                  </div>
+                  <div className="border-2 border-teal-900 hover:border-teal-500 rounded-2xl shadow-md cursor-pointer shadow-gray-300 w-min h-min p-4">
+                     <h1>Prescription Form</h1>
+                  </div>
+                  <div className="border-2 border-teal-900 hover:border-teal-500 rounded-2xl shadow-md cursor-pointer shadow-gray-300 w-min h-min p-4">
+                     <h1>Medical Certificate</h1>
+                  </div>
+                  <div className="border-2 border-teal-900 hover:border-teal-500 rounded-2xl shadow-md cursor-pointer shadow-gray-300 w-min h-min p-4">
+                     <h1>Referral Form</h1>
+                  </div>
+                  <div className="border-2 border-teal-900 hover:border-teal-500 rounded-2xl shadow-md cursor-pointer shadow-gray-300 w-min h-min p-4">
+                     <h1>Blank Document</h1>
+                  </div>
+                  <div className="border-2 border-teal-900 hover:border-teal-500 rounded-2xl shadow-md cursor-pointer shadow-gray-300 w-min h-min p-4">
+                     <h1>Template</h1>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                  <button
+                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                    onClick={() => setShowModal(false)}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+        </>
+      ) : null}
+        
         <div className="flex md:flex-row flex-col flex-wrap justify-center items-center md:gap-x-28 gap-y-10 md:gap-y-14">
           <div className="border-2 border-light2 rounded-xl py-4 px-2 flex flex-col items-center">
             <AiFillFilePdf className="text-[150px] fill-red-500" />

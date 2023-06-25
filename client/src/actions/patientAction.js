@@ -61,3 +61,15 @@ export const deletePatient = (patientid) => async (dispatch) => {
         swal("Error While Deleting Patient");
     }
 };
+
+export const filterPatient = (searchKey) => async dispatch => {
+    let filteredPatient;
+    dispatch({type : 'GET_PATIENTS_REQUEST'});
+    try {
+      const res = await axios.get('/api/patients/getallpatients');
+      filteredPatient = res.data.filter(patient => patient.fname.toLowerCase().includes(searchKey));
+      dispatch({type : 'GET_PATIENTS_SUCCESS',payload : filteredPatient});
+    } catch (error) {
+     dispatch({type : 'GET_PATIENTS_FAIL',payload : error});
+    }
+ };

@@ -20,19 +20,19 @@ const AdminNavbar = () => {
                   <NavLink to='/' end
                     className={({ isActive }) => isActive ? 'text-light2 font-bold' : null }
                   > 
-                  <li className=' cursor-pointer text-md font-black hover:text-light2'>Dashboard</li>
+                  <li className=' cursor-pointer text-lg font-semibold hover:text-light2'>Dashboard</li>
                   </NavLink>
                   <NavLink to='/patients'
                     className={({ isActive }) => isActive ? 'text-light2 font-bold' : null }
                   > 
-                  <li className=' cursor-pointer text-md font-black hover:text-light2'>Patient</li>
+                  <li className=' cursor-pointer text-lg font-semibold hover:text-light2'>Patient</li>
                   </NavLink>
                   <NavLink to='/doctors'
                     className={({ isActive }) => isActive ? 'text-light2 font-bold' : null }
                   > 
-                  <li className=' cursor-pointer text-md font-black hover:text-light2'>Doctor</li>
+                  <li className=' cursor-pointer text-lg font-semibold hover:text-light2'>Doctor</li>
                   </NavLink>
-                  <li className=' cursor-pointer text-md font-black hover:text-light2' onClick={() => {dispatch(logoutAdmin())}}>Logout</li>
+                  <li className=' cursor-pointer text-lg font-semibold hover:text-light2' onClick={() => {dispatch(logoutAdmin())}}>Logout</li>
               </ul>
 
               <div className="flex relative">

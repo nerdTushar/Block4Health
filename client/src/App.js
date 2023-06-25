@@ -18,10 +18,10 @@ import AdminDashboardScreen from './screens/AdminDashboardScreen'
 import PatientsList from './screens/PatientsList'
 import DoctorsList from './screens/DoctorsList'
 import DoctorsAccessList from './screens/DoctorsAccessList'
-import PatientsAddViewEhr from './screens/PatientsAddViewEhr'
 import AddEhrScreen from './screens/AddEhrScreen'
 import PatientDocumentScreen from './screens/PatientDocumentScreen'
 import PatientFullProfile from './screens/PatientFullProfile'
+import AccessEHR from './screens/AccessEHR'
 
 const App = () => {
 
@@ -50,7 +50,7 @@ const App = () => {
           <Route exact path="/" element={<DoctorDashboardScreen/>}/>
           <Route exact path="/getdocument" element={<PatientDocumentScreen/>}/>
           <Route exact path="/getpatientfullprofile" element={<PatientFullProfile/>}/>
-          <Route exact path="/addviewehr" element={<PatientsAddViewEhr/>}/>
+          <Route exact path="/accessehr" element={<AccessEHR/>}/>
           <Route exact path="/addehr" element={<AddEhrScreen/>}/>
          </Routes>
        </>) : (currentAdmin ? (<>

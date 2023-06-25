@@ -243,9 +243,7 @@ const Navbar = () => {
               <div className='flex flex-col justify-start pb-5 md:items-start items-center w-full gap-5 md:gap-10 '>
                 <h1 className='text-teal-900 font-semibold hover:text-light2'>BLOCK4HEALTH</h1>
                 <h1 className='text-teal-900 font-black text-center text-6xl hover:text-light2'>Own Your <span className='text-center'>Health</span></h1>
-                <h1 className='md:text-left text-center text-md'>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-                    Velit officia consequat duis enim velit mollit. Exercitation veniam consequat 
-                    sunt nostrud amet.
+                <h1 className='md:text-left text-center text-md'>Own your health records with our Web 3.0 healthcare system. Securely trade and share your data, putting you in control. Embrace the future of patient-centered care. Join us now!
                 </h1>
                 <button className='cursor-pointer hover:bg-light2 bg-teal-900 text-white p-2 md:w-1/4 w-1/2 rounded-[20px]'>How It Works</button>
               </div>

@@ -22,16 +22,16 @@ const DoctorNavbar = () => {
                   > 
                   <li className=' cursor-pointer text-2xl font-black hover:text-light2'>Dashboard</li>
                   </NavLink>
-                  <NavLink to='/addviewehr'
+                  <NavLink to='/accessehr'
                     className={({ isActive }) => isActive ? 'text-light2 font-bold' : null }
                   > 
-                  <li className=' cursor-pointer text-2xl font-black hover:text-light2'>EHR</li>
+                  <li className=' cursor-pointer text-2xl font-black hover:text-light2'>Access</li>
                   </NavLink>
-                  <NavLink to='/viewehr'
+                  {/* <NavLink to='/viewehr'
                     className={({ isActive }) => isActive ? 'text-light2 font-bold' : null }
                   > 
                   <li className=' cursor-pointer text-2xl font-black hover:text-light2'>View EHR</li>
-                  </NavLink>
+                  </NavLink> */}
                   <li className=' cursor-pointer text-2xl font-black hover:text-light2' onClick={() => {dispatch(logoutDoctor())}}>Logout</li>
               </ul>
 
@@ -50,16 +50,16 @@ const DoctorNavbar = () => {
             >
             <li className='my-2 text-lg mx-4 font-semibold cursor-pointer hover:text-[#35b6b4]'>Dashboard</li>
             </NavLink>
-            <NavLink to='/addviewehr'
+            <NavLink to='/accessehr'
                className={({ isActive }) => isActive ? 'text-[#35b6b4] font-bold' : null }
             >
-            <li className='my-2 text-lg mx-4 font-semibold cursor-pointer hover:text-[#35b6b4]'>EHR</li>
+            <li className='my-2 text-lg mx-4 font-semibold cursor-pointer hover:text-[#35b6b4]'>Access</li>
             </NavLink>
-            <NavLink to='/viewehr'
+            {/* <NavLink to='/viewehr'
                className={({ isActive }) => isActive ? 'text-[#35b6b4] font-bold' : null }
             >
             <li className='my-2 text-lg mx-4 font-semibold cursor-pointer hover:text-[#35b6b4]'>View EHR</li>
-            </NavLink>
+            </NavLink> */}
             <li className='my-2 text-lg mx-4 font-semibold cursor-pointer hover:text-[#35b6b4]' onClick={() => {dispatch(logoutDoctor())}}>Logout</li>
           </ul>
         )}
